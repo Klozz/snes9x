@@ -40,14 +40,14 @@
 #define IDB_HIDDENFOLDER                149
 #define IDD_MULTICART                   150
 #define IDD_DIALOG_SHADER_PARAMS        155
+#define IDD_DIALOG_XAUDIO2_INIT_ERROR   159
+#define IDI_ICON2                       160
 #define IDC_DRIVER                      1001
 #define IDC_BUFLEN                      1002
 #define IDC_RATE                        1003
 #define IDC_MIX                         1004
+#define IDC_OUTPUT_DEVICE               1004
 #define IDC_DYNRATECONTROL              1005
-#define IDC_AUTOMATICINPUTRATE          1021
-#define IDC_STEREO                      1006
-#define IDC_REV_STEREO                  1007
 #define IDC_LINEAR_INTER                1008
 #define IDC_SYNC_TO_SOUND_CPU           1009
 #define IDC_ECHO                        1011
@@ -64,6 +64,7 @@
 #define IDC_WIP1                        1019
 #define IDC_ADDRESS                     1020
 #define IDC_FAMT                        1020
+#define IDC_AUTOMATICINPUTRATE          1021
 #define IDC_ROM_DATA                    1051
 #define IDC_WARNINGS                    1052
 #define IDC_DISCLAIMER                  1053
@@ -90,6 +91,8 @@
 #define IDC_REWIND_BUFFER_SPIN          1069
 #define IDC_REWIND_GRANULARITY          1070
 #define IDC_REWIND_GRANULARITY_SPIN     1071
+#define IDC_SFXSPEED                    1072
+#define IDC_SFXSPEED_SPIN               1073
 #define IDC_HOSTNAME                    1086
 #define IDC_PORTNUMBER                  1087
 #define IDC_CLEARHISTORY                1088
@@ -250,8 +253,10 @@
 #define IDC_LABEL_GRANU_TEXT            1187
 #define IDC_LABEL_PAUSEINTERVAL         1188
 #define IDC_LABEL_UP9                   1188
+#define IDC_LABEL_SFXSPEED              1188
 #define IDC_LABEL_PAUSEINTERVAL_TEXT    1189
 #define IDC_LABEL_UP10                  1189
+#define IDC_LABEL_SFXSPEED_2            1189
 #define IDC_LABEL_MAXSKIP               1190
 #define IDC_LABEL_UP11                  1190
 #define IDC_LABEL_CHEAT_CODE            1191
@@ -269,6 +274,7 @@
 #define IDC_HEIGHT_EXTEND               1198
 #define IDC_LABEL_UP19                  1198
 #define IDC_ASPECT                      1199
+#define IDC_LABEL_UP26                  1199
 #define IDC_MESSAGES_IN_IMAGE           1200
 #define IDC_RECORD_NOW                  1201
 #define IDC_MESSAGES_SCALE              1201
@@ -335,6 +341,8 @@
 #define IDC_LABEL_HK13                  1256
 #define IDC_PLAYWARN                    1257
 #define IDC_REDUCEINPUTLAG              1258
+#define IDC_INTEGERSCALING              1259
+#define IDC_NTSCSCANLINES               1260
 #define IDC_HOTKEY1                     2000
 #define IDC_HOTKEY2                     2001
 #define IDC_HOTKEY3                     2002
@@ -377,6 +385,13 @@
 #define IDC_SLIDER_VOLUME_TURBO         3020
 #define IDC_EDIT_VOLUME_TURBO           3021
 #define IDC_STATIC_CONTAINER            3022
+#define IDC_STATIC_MEMORY_TYPE          3023
+#define IDC_STATIC_INTERLEAVE_MODE      3024
+#define IDC_STATIC_VIDEO_SYSTEM         3025
+#define IDC_STATIC_HEADER               3026
+#define IDC_ROM_SPLITTER                3027
+#define IDC_SYSLINK_DX                  3028
+#define IDC_STATIC_ICON                 3029
 #define ID_FILE_EXIT                    40001
 #define ID_WINDOW_HIDEMENUBAR           40004
 #define ID_FILE_AVI_RECORDING           40005
@@ -389,8 +404,6 @@
 #define ID_SOUND_INTERPOLATED           40027
 #define ID_SOUND_SYNC                   40028
 #define ID_WINDOW_FULLSCREEN            40029
-#define ID_SOUND_16BIT                  40030
-#define ID_SOUND_STEREO                 40031
 #define ID_WINDOW_STRETCH               40032
 #define ID_SOUND_8000HZ                 40033
 #define ID_SOUND_11025HZ                40034
@@ -420,7 +433,6 @@
 #define ID_SOUND_48000HZ                40085
 #define ID_SOUND_16000HZ                40086
 #define ID_SOUND_35000HZ                40087
-#define ID_SOUND_REVERSE_STEREO         40088
 #define ID_FILE_SAVE_SRAM_DATA          40089
 #define ID_RECENT_DUMMY                 40090
 #define IDM_ROM_INFO                    40094
@@ -482,8 +494,8 @@
 #define ID_SOUND_144MS                  40162
 #define ID_SOUND_160MS                  40163
 #define ID_SOUND_176MS                  40164
-#define ID_SOUND_194MS                  40165
-#define ID_SOUND_210MS                  40166
+#define ID_SOUND_192MS                  40165
+#define ID_SOUND_208MS                  40166
 #define ID_EMULATION_PAUSEWHENINACTIVE  40167
 #define ID_VIDEO_SHOWFRAMERATE          40168
 #define ID_WINDOW_SIZE_1X               40169
@@ -517,15 +529,16 @@
 #define ID_FILE_LOAD8                   44028
 #define ID_FILE_LOAD9                   44029
 #define ID_FILE_LOAD_FILE               44030
+#define IDM_MACSRIFLE_TOGGLE            44031
 #define IDC_STATIC                      -1
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        157
+#define _APS_NEXT_RESOURCE_VALUE        164
 #define _APS_NEXT_COMMAND_VALUE         40178
-#define _APS_NEXT_CONTROL_VALUE         3023
+#define _APS_NEXT_CONTROL_VALUE         3032
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
